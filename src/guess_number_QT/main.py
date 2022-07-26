@@ -2,6 +2,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import random, sys
 
 class Ui_MainWindow(object):
+    
+    """
+    init window
+    :return: None
+    """
+    
     def setupUi(self, MainWindow):
         self.nm=random.randint(-1000,1000)
         MainWindow.setObjectName("MainWindow")
@@ -34,6 +40,12 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def check(self):
+        
+        """
+        function with click button
+        :return: None
+        """
+        
         print(self.nm)
         val=self.lineEdit.text()
         if val:
@@ -70,6 +82,12 @@ class Ui_MainWindow(object):
             msg.exec()
 
     def retranslateUi(self, MainWindow):
+        
+        """
+        func with names
+        :return: None
+        """
+        
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Guess the number"))
         self.pushButton.setText(_translate("MainWindow", "Проверить"))
