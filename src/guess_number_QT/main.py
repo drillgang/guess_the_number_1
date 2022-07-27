@@ -46,7 +46,6 @@ class Ui_MainWindow(object):
         :return: None
         """
         
-        print(self.nm)
         val=self.lineEdit.text()
         if val:
             val=int(val)
